@@ -332,7 +332,7 @@ def candy_share(candies):
     while any(c >= 2 for c in candies):
         new = list(candies)
         for i in range(n):
-            if candies[i] >= 2:  # decision uses the round-start state
+            if candies[i] >= 2:
                 new[i] -= 2
                 new[(i - 1) % n] += 1
                 new[(i + 1) % n] += 1
